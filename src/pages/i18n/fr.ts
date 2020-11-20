@@ -10,6 +10,16 @@ export default {
   navigation: {
     goBack: "Retour",
   },
+  home: {
+    header: {
+      jobTitle: "Ingénieur Logiciel Full‑stack",
+      seeResume: "Voir mon CV",
+      engineer: "Ingénieur",
+      entrepreneur: "Entrepeneur",
+      father: "Père",
+      quickDescription: "Currently designing @Uber. Formerly Experience Design Director @GoPro and Interactive Director @Focus Lab. Follow my work, words and photos below."
+    },
+  },
   cv: {
     title: "Ingénieur Logiciel Full‑stack",
     experience: {

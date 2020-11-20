@@ -10,6 +10,12 @@ export default {
   navigation: {
     goBack: "Back",
   },
+  home: {
+    header: {
+      jobTitle: "Full Stack Software Engineer",
+      seeResume: "See my Resume",
+    },
+  },
   cv: {
     title: "Full Stack Software Engineer",
     experience: {

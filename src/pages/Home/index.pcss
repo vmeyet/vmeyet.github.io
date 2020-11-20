@@ -1,14 +1,38 @@
 .container {
+  --sidebar-size: 35%;
+
   height: 100%;
-  display: flex;
-  align-items: stretch;
 }
 
 .header {
-  width: 35%;
-  background: red;
+  height: 90vh;
+  width: 100vw;
+  align-items: center;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 0;
+
+  @media only screen and (min-width: 1024px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--sidebar-size);
+  }
 }
 
 .content {
-  flex: 1;
+  background: var(--overflow);
+  width: 100vw;
+
+  @media only screen and (min-width: 1024px) {
+    width: calc(100% - var(--sidebar-size));
+  }
+
+  footer {
+    display: flex;
+    width: 100%;
+  }
 }

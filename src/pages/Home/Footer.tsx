@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Header.pcss";
+import styles from "./Footer.pcss";
 
 const Footer = () => {
-  return <footer>
-      <h2 className={styles.subheader}>Footer</h2>
-  </footer>;
+  return <div className={styles.container}>
+      <h2>Footer</h2>
+  </div>;
 }
 
 export default Footer;

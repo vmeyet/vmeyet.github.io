@@ -5,21 +5,20 @@
   --overlay-dark: #16142b;
   --overlay-light: #1b1835;
 
-  --light: hsl(0, 0%, 81%);
+  --light: hsl(0, 0%, 70%);
   --turquoise: #0df7db;
   --turquoise-dark: #23b0bd;
-  --pink: #f65b74;
-  --yellow: #f8cd82;
   --orange: #f65b74;
+  --yellow: #f8cd82;
+  --pink: #f72078;
   
   --text: var(--light);
-  --accent: var(--yellow);
-  --text-link: var(--turquoise);
 
-  --font-sans-serif: 'Nunito Sans';
+  --font-sans-serif: 'Nunito Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'Fira Code', mono;
 
   background-color: var(--overflow);
-  overflow: hidden;
 }
 
 * {
@@ -27,11 +26,14 @@
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   background-color: var(--base);
   color: var(--text);
   font-family: var(--font-sans-serif);
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +47,7 @@ ul {
 }
 
 a {
-  color: var(--text-link);
+  color: var(--turquoise);
   text-decoration: none;
 }
 
@@ -77,11 +79,50 @@ nav {
   z-index: 100;
 }
 
-:global(#root) {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
+:global {
+  .typo-hack {
+    font-family: var(--font-mono);
+    opacity: 0.2;
+    font-size: 0.8em;
+  }
+
+  .button-neon {
+    --neon-color: var(--orange);
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-color: var(--neon-color);
+    color: white;
+    /* border: 1px solid var(--orange); */
+  
+    &:hover {
+      background-color: var(--overlay-light);
+      color: var(--neon-color);
+      border: 0.5px solid white;
+      box-shadow: 0 0 2px 2px var(--neon-color),
+        inset 0 0 2px 2px var(--neon-color);
+      cursor: pointer;
+  
+      color:white;
+      text-shadow: 1px  0 0 var(--neon-color),
+        -1px 0 0 var(--neon-color),
+        0 1px 0 var(--neon-color),
+        0 -1px 0 var(--neon-color),
+        0 0 3px var(--neon-color),
+        0 0 3px var(--neon-color),
+        0 0 3px var(--neon-color),
+        0 0 10px var(--neon-color),
+        0 0 10px var(--neon-color);
+
+      svg {
+        filter: drop-shadow(1px  0 0 var(--neon-color))
+          drop-shadow(-1px 0 0 var(--neon-color))
+          drop-shadow(0 1px 0 var(--neon-color))
+          drop-shadow(0 -1px 0 var(--neon-color))
+          drop-shadow(0 0 3px var(--neon-color))
+          drop-shadow(0 0 10px var(--neon-color));
+      }
+    }
+  }
 }

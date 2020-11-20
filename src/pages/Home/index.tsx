@@ -12,12 +12,12 @@ import styles from "./index.pcss";
 i18n.initialize();
 
 const Home = () => <div className={styles.container}>
-  <div className={styles.header}>
+  <header className={styles.header}>
     <Header />
-  </div>
+  </header>
   <div className={styles.content}>
-    <Spotlight />
-    <Footer />
+    <section><Spotlight /></section>
+    <footer><Footer /></footer>
   </div>
 </div>;
 

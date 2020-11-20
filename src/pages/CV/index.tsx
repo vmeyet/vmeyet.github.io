@@ -15,7 +15,7 @@ const ChangeLanguageButton = () => {
   const language = i18n.language();
   const nextLanguage = languages[(languages.indexOf(language) + 1) % languages.length];
 
-  return <button onClick={() => i18n.changeLanguage(nextLanguage)}>{t(`languages.${nextLanguage}`)}</button>;
+  return <button className="button-neon" onClick={() => i18n.changeLanguage(nextLanguage)}>{t(`languages.${nextLanguage}`)}</button>;
 }
 
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
     <nav className="navigation no-print">
       <a className="back" href="./index.html"><IoIosArrowBack className="react-icons" /><span>{t("navigation.goBack")}</span></a>
       <div className="flexpand" />
-      <button className="print" onClick={() => window.print()}><MdPrint className="react-icons" /></button>
+      <button className="print button-neon" onClick={() => window.print()}><MdPrint className="react-icons" /></button>
       <ChangeLanguageButton />
     </nav>
 
