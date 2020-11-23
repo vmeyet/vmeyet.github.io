@@ -9,7 +9,7 @@
   --turquoise: #0df7db;
   --turquoise-dark: #23b0bd;
   --orange: #f65b74;
-  --yellow: #f8cd82;
+  --yellow: #f8cd51;
   --pink: #f72078;
   
   --text: var(--light);
@@ -82,8 +82,9 @@ nav {
 :global {
   .typo-hack {
     font-family: var(--font-mono);
-    opacity: 0.2;
+    opacity: 0.3;
     font-size: 0.8em;
+    padding: 1em;
   }
 
   .button-neon {

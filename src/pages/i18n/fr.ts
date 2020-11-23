@@ -14,10 +14,18 @@ export default {
     header: {
       jobTitle: "Ingénieur Logiciel Full‑stack",
       seeResume: "Voir mon CV",
-      engineer: "Ingénieur",
+      creator: "Créateur",
+      engineer: "Développeur",
       entrepreneur: "Entrepeneur",
       father: "Père",
-      quickDescription: "Currently designing @Uber. Formerly Experience Design Director @GoPro and Interactive Director @Focus Lab. Follow my work, words and photos below."
+      quickDescription: "Au service de l'efficacité, je navigue dans l'écosystème des startups parisiennes. Cofondateur de @joliefamily, j'ai également travaillé chez @bannerman (YC2014)."
+    },
+    projects: {
+      joliefamily: "Joliefamily with claire paoletti",
+    },
+    footer: {
+      madeInFrance: "Fait en France.",
+      moto: "Crééons des choses belles et efficaces",
     },
   },
   cv: {

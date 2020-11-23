@@ -1,23 +1,90 @@
+@keyframes :global(wave1) {
+  0% { transform: scaleX(2) }
+  50% { transform: scaleX(3) translateX(13%) }
+  100% { transform: scaleX(2) }
+}
+
+@keyframes :global(wave2) {
+  0% { transform: scaleX(2) translateX(10%) }
+  50% { transform: scaleX(1.5)  }
+  100% { transform: scaleX(2) translateX(10%) }
+}
+
+.gradients {
+  position: absolute;
+  height: 0;
+  width: 0;
+
+  --turquoise-transparent: #0df7dbe0;
+  --turquoise-dark-transparent: #23b0bde0;
+  --orange-transparent: #f65b74e0;
+  --yellow-transparent: #f8cd51e0;
+  --pink-transparent: #f72078e0;
+}
+
 .spots {
   > * {
+    align-items: center;
+    background-image: linear-gradient(180deg, transparent, var(--overlay-dark) 80%);
+    background-size: cover;
     display: flex;
-    height: 97vh;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
   }
 
-  > *:nth-child(1) {
-    background-color: var(--yellow);
-    /* background-image: linear-gradient(195deg, var(--base), var(--surface) 70%, var(--pink) 70%, var(--yellow)); */
+  > *:nth-child(1n) {
+    .wave  {
+      fill: url(#spot1);
+    }
   }
 
-  > *:nth-child(2) {
-    background-color: var(--orange);
+  > *:nth-child(2n) {
+    .wave {
+      fill: url(#spot2);
+    }
   }
 
-  > *:nth-child(3) {
-    background-color: var(--turquoise);
+  > *:nth-child(3n) {
+    .wave {
+      fill: url(#spot3);
+    }
   }
 
-  > *:nth-child(4) {
-    background-color: var(--pink);
+  > *:nth-child(4n) {
+    .wave {
+      fill: url(#spot4);
+    }
+  }
+
+  .projectId {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    opacity: 0.3;
+  }
+
+  .wave {
+    --duration: 20s;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 10em;
+    width: 200%;
+
+    &:nth-child(even) {
+      :global {
+        animation: wave1 var(--duration) cubic-bezier(.10,.40,.60,.50) infinite;
+      }
+    }
+
+    &:nth-child(odd) {
+      :global {
+        animation: wave2 var(--duration) cubic-bezier(.60,.40,.30,.50) infinite;
+      }
+    }
   }
 }

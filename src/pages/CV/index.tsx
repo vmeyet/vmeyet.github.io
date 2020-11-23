@@ -1,6 +1,6 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
-import i18n from "../i18n";
+import i18n from "~/pages/i18n";
 import { FiExternalLink } from "react-icons/fi";
 import { MdPrint } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";

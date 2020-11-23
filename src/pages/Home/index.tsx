@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import i18n from "../i18n";
+import i18n from "~/pages/i18n";
 
 import Header from "./Header";
 import Spotlight from "./Spotlight";
