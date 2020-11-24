@@ -1,19 +1,8 @@
 import React from "react";
 import { useTranslation } from "~/pages/i18n";
+import { LinkedText } from "~/pages/parts";
 import styles from "./Header.pcss";
 import Name from "./Name";
-
-const Linked = ({ text }: { text: string }) => {
-  const matches = text.match(/@\w+/g) || [];
-  const parts = text.split(/@\w+/g);
-  const mapping: { [key: string]: JSX.Element } = {
-    "@joliefamily": <a href="https://joliefamily.webflow.io">@joliefamily</a>,
-    "@bannerman": <a href="https://www.bannerman.com/">@bannerman</a>
-  }
-  const replacements = matches.map(match => mapping[match] || match);
-
-  return <>{parts.map((part, idx) => <span key={idx}>{part}{replacements[idx]}</span>)}</>;
-}
 
 const Header = () => {
   const { t } = useTranslation();
@@ -32,7 +21,14 @@ const Header = () => {
           &amp; {t("home.header.father")}.
         </h2>
 
-        <p><Linked text={t("home.header.quickDescription")} /></p>
+        <p>
+          <LinkedText
+            text={t("home.header.quickDescription")}
+            textLinks={{
+              "@joliefamily": "https://joliefamily.webflow.io",
+              "@bannerman": "https://www.bannerman.com",
+            }} />
+        </p>
       </section>
 
       <div className={styles.ctas}><a className={`button-neon ${styles.cta}`} href="./cv.html">{t("home.header.seeResume")}</a></div>

@@ -62,10 +62,11 @@
   }
   
   .title {
+    color: var(--yellow);
     font-weight: 400;
-    color: var(--turquoise-dark);
-    word-wrap: break-word;
+    opacity: 0.8;
     hyphens: auto;
+    word-wrap: break-word;
   }
   
   .dates {

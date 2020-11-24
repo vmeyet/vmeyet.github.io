@@ -1,10 +1,11 @@
 import React from "react";
 
 import styles from "./Spotlight.pcss";
-import Project from "../../models/Project";
-import ProjectService from "../../services/projects";
+import Project from "~/models/Project";
+import ProjectService from "~/services/projects";
 import Joliefamily from "./Projects/Joliefamily";
-import { Code } from "../parts";
+import Kinect from "./Projects/Kinect";
+import { Code } from "~/pages/parts";
 
 const WaveGradients = () => <>
   <svg xmlns="http://www.w3.org/2000/svg" className={styles.gradients} width="0" height="0">
@@ -67,6 +68,8 @@ const ProjectView = ({ project }: { project: Project }) => {
   switch(project.name) {
     case "joliefamily":
       return <>{id}<Joliefamily /></>;
+    case "kinect-bi":
+      return <>{id}<Kinect /></>;
     default:
       return <>{id}</>;
   }

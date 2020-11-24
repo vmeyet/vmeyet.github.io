@@ -32,6 +32,7 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
+    padding: 1em;
   }
 
   > *:nth-child(1n) {
@@ -56,6 +57,10 @@
     .wave {
       fill: url(#spot4);
     }
+  }
+
+  *:not(.wave) {
+    z-index: 1;
   }
 
   .projectId {

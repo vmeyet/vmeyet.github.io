@@ -4,6 +4,14 @@
   flex: 1;
   padding: 1em;
 
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+
+    > *:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+
   .column1 {
     align-items: center;
     flex-direction: column;
@@ -24,23 +32,8 @@
         margin: 0 0.5em;
         font-size: 1.5em;
 
-        /* &:hover {
-          color: var(--turquoise);
-        } */
-        --neon-color: var(--turquoise-dark);
-
         &:hover {
-          color: var(--neon-color);
-          cursor: pointer;
           color: white;
-          svg {
-            filter: drop-shadow(1px  0 0 var(--neon-color))
-              drop-shadow(-1px 0 0 var(--neon-color))
-              drop-shadow(0 1px 0 var(--neon-color))
-              drop-shadow(0 -1px 0 var(--neon-color))
-              drop-shadow(0 0 1px var(--neon-color))
-              drop-shadow(0 0 10px var(--neon-color));
-          }
         }
       }
     }

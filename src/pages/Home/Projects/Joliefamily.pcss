@@ -1,12 +1,36 @@
 .layout {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  max-width: 600px;
+  text-align: center;
 }
 
 .logo {
-  height: 3em;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+  img {
+    height: 3em;
+  }
+}
+
+.description {
+  flex: 1;
+}
+
+.images {
+  flex: 2;
+  position: relative;
+}
+
+.application {
+  transform: scale(1.2);
 }
 
 .revue, .application {
-  width: 50px;
+  max-width: 46%;
+  margin: 1%;
 }
