@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "yarn run eslint",
     "clean": "rm -rf dist && rm -rf node_modules",
-    "serve": "yarn && parcel src/index.html"
+    "serve": "yarn && parcel src/index.html",
+    "prepareBuild": "rm -f *.mp4 *.js *.css *.css.map *.html *.js.map *.svg *.png *.jpg",
+    "build": "yarn run prepareBuild && parcel build src/index.html && mv dist/* ."
   },
   "keywords": [],
   "author": "",
@@ -26,6 +28,7 @@
     "@babel/runtime": "^7.12.5",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
+    "cssnano": "^4.1.10",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
