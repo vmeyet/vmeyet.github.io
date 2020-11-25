@@ -10,7 +10,7 @@
     "serve": "yarn && parcel src/index.html",
     "build": "parcel build src/index.html --experimental-scope-hoisting",
     "github-pages": "cp ./dist/index.html index.html && sed -E 's$=\"/$=\"/dist/$g' ./dist/index.html > ./index.html",
-    "production": "yarn run clean && yarn && yarn run build && yarn run github-pages"
+    "production": "yarn run clean && yarn && yarn run build && cp -R dist docs"
   },
   "keywords": [],
   "author": "",
