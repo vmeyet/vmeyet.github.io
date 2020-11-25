@@ -1,18 +1,16 @@
 import React from "react";
 import { useTranslation } from "~/pages/i18n";
-import { LinkedText } from "~/pages/parts";
+import { LinkedText, Name } from "~/pages/parts";
 import styles from "./Header.pcss";
-import Name from "./Name";
 
 const Header = () => {
   const { t } = useTranslation();
 
-  return <div className={styles.container}>
-      <h1><Name /></h1>
-      {/* <h2 className={styles.jobTitle}>[root@web]$&gt; {t("home.header.jobTitle")} <BlinkingCursor /></h2> */}
+  return <div itemScope itemType="http://data-vocabulary.org/Person" className={styles.container}>
+      <h1 itemProp="name"><Name /></h1>
       <section>
         <h2 className={styles.subheader}>
-          {t("home.header.engineer")}
+          <span itemProp="jobTitle">{t("home.header.engineer")}</span>
           <br/>
           {t("home.header.creator")}
           <br/>

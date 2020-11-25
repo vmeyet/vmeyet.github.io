@@ -7,7 +7,9 @@ import { IoIosArrowBack } from "react-icons/io";
 
 i18n.initialize();
 
-const ExtLink = ({ site }: { site: string }) => <a href={site} className="no-print"><small><FiExternalLink /></small></a>;
+const ExtLink = ({ site }: { site: string }) => <a aria-label={site} href={site} className="no-print">
+  <small><FiExternalLink /></small>
+</a>;
 
 const ChangeLanguageButton = () => {
   const { t } = i18n.useTranslation();
@@ -15,7 +17,12 @@ const ChangeLanguageButton = () => {
   const language = i18n.language();
   const nextLanguage = languages[(languages.indexOf(language) + 1) % languages.length];
 
-  return <button className="button-neon" onClick={() => i18n.changeLanguage(nextLanguage)}>{t(`languages.${nextLanguage}`)}</button>;
+  return <button
+    aria-label={t(`languages.${nextLanguage}`)}
+    className="button-neon"
+    onClick={() => i18n.changeLanguage(nextLanguage)}>
+    {t(`languages.${nextLanguage}`)}
+  </button>;
 }
 
 const App = () => {
@@ -23,9 +30,13 @@ const App = () => {
 
   return <>
     <nav className="navigation no-print">
-      <a className="back" href="./index.html"><IoIosArrowBack className="react-icons" /><span>{t("navigation.goBack")}</span></a>
+      <a aria-label={t("navigation.goBack")} className="back" href="./index.html">
+        <IoIosArrowBack className="react-icons" /><span>{t("navigation.goBack")}</span>
+      </a>
       <div className="flexpand" />
-      <button className="print button-neon" onClick={() => window.print()}><MdPrint className="react-icons" /></button>
+      <button aria-label={t("navigation.print")} className="print button-neon" onClick={() => window.print()}>
+        <MdPrint className="react-icons" />
+      </button>
       <ChangeLanguageButton />
     </nav>
 
@@ -41,7 +52,6 @@ const App = () => {
       <div className="two">
         <aside className="contact">
           <a href="https://www.github.com/vmeyet">github.com/vmeyet</a>
-          <br />
           <a href="https://www.linkedin.com/in/vivienmeyet">linkedin.com/in/vivienmeyet</a>
         </aside>
       </div>

@@ -9,6 +9,7 @@ export default {
   },
   navigation: {
     goBack: "Retour",
+    print: "Imprimer",
   },
   home: {
     header: {
@@ -21,12 +22,25 @@ export default {
       quickDescription: "Au service de l'efficacité, je navigue dans l'écosystème des startups parisiennes. Cofondateur de @joliefamily, j'ai également travaillé chez @bannerman (YC2014)."
     },
     projects: {
-      joliefamily: "Joliefamily la revue familiale mensuelle, cofondée avec @clairepaoletti en mars 2019. Nous avons aidé les familles à recréer du lien autour d'un réseau social privé et construire mensuellement un album à l'attention d'un proche moins connecté. Des centaines d'utilisateurs utilisaient notre application quotidiennement et avons été incubé à la @bluefactory (ESCP). Nous avons décidé d'arrêter l'aventure en octobre 2020.",
-      kinect: "La Kinect au service de la Business Intelligence. J'ai organisé la recherche et le développement d'une interface naturelle de manipulation de données en utilisant la Microsoft Kinect. En 2012, alors que les APIs publiques de Microsoft n'étaient alors pas encore disponible, j'ai développé une API de détection de gestes et la boîte à outils d'éléments UI."
+      joliefamily: {
+        images: {
+          application: "Design de l'application Joliefamily",
+          logo: "Logo de Joliefamily",
+          revue: "Design de la revue Joliefamily",
+        },
+        description: "Joliefamily la revue familiale mensuelle, cofondée avec @clairepaoletti en mars 2019. Nous avons aidé les familles à recréer du lien autour d'un réseau social privé et construire mensuellement un album à l'attention d'un proche moins connecté. Nous avons été incubé à la @bluefactory (ESCP) et des centaines d'utilisateurs utilisaient notre application quotidiennement. Nous avons décidé d'arrêter l'aventure en octobre 2020.",
+      },
+      kinect: "La Kinect au service de la Business Intelligence. J'ai organisé la recherche et le développement d'une interface naturelle de manipulation de données. En 2012, alors que les APIs publiques de Microsoft n'étaient alors pas encore disponible, j'ai développé une API de détection de gestes et la boîte à outils d'éléments UI."
     },
     footer: {
       madeInFrance: "Fait en France.",
-      moto: "Crééons des choses belles et efficaces",
+      moto: "Créons des choses belles et efficaces",
+      links: {
+        github: "Vivien sur Github",
+        stackoverflow: "Vivien sur StackOverflow",
+        linkedin: "Vivien sur LinkedIn",
+        instagram: "Vivien sur Instagram",
+      },
     },
   },
   cv: {

@@ -9,7 +9,9 @@ const Kinect = () => {
   
   return <div className={styles.layout}>
     <div className={styles.title}>
-      <b>KINECT</b>™️&nbsp;vs.&nbsp;<b>SAP</b>
+      <span>
+        <b>KINECT</b><sup>TM</sup>&nbsp;vs.&nbsp;<b>SAP</b>
+      </span>
     </div>
     
     <p className={styles.description}>

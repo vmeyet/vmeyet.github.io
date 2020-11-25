@@ -1,8 +1,6 @@
 @import "../../styles/theme.css";
 
 :root {
-  --light2: hsl(0, 0%, 81%, 50%);
-
   overflow: hidden;
 }
 
@@ -16,6 +14,13 @@
     overflow: auto;
     padding: 10px;
     padding-top: 50px;
+  }
+
+  .contact {
+    a {
+      display: block;
+      margin: 0.2em 0;
+    }
   }
 
   .navigation {
@@ -57,8 +62,8 @@
 
   .section-title {
     text-transform: uppercase;
-    color: var(--light2);
     font-weight: 300;
+    opacity: 0.6;
   }
   
   .title {
@@ -82,9 +87,9 @@
   }
   
   .stack {
-    text-transform: uppercase;
-    color: var(--light2);
     font-size: 0.8em;
+    opacity: 0.6;
+    text-transform: uppercase;
   }
 
   .wrapper {

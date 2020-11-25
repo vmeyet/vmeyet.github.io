@@ -9,6 +9,7 @@ export default {
   },
   navigation: {
     goBack: "Back",
+    print: "Print",
   },
   home: {
     header: {

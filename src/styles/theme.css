@@ -114,11 +114,10 @@ nav {
   .button-neon {
     --neon-color: var(--orange);
 
-    outline: none;
     border: none;
     background-color: transparent;
     background-color: var(--neon-color);
-    color: white;
+    color: var(--overlay-light);
     /* border: 1px solid var(--orange); */
   
     &:hover {

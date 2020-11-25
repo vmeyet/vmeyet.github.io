@@ -8,8 +8,9 @@
     "lint": "yarn run eslint",
     "clean": "rm -rf dist && rm -rf node_modules",
     "serve": "yarn && parcel src/index.html",
-    "prepareBuild": "rm -f *.mp4 *.js *.css *.css.map *.html *.js.map *.svg *.png *.jpg",
-    "build": "yarn run prepareBuild && parcel build src/index.html && mv dist/* ."
+    "build": "parcel build src/index.html --experimental-scope-hoisting",
+    "github-pages": "cp ./dist/index.html index.html && sed -E 's$=\"/$=\"/dist/$g' ./dist/index.html > ./index.html",
+    "production": "yarn run clean && yarn && yarn run build && yarn run github-pages"
   },
   "keywords": [],
   "author": "",

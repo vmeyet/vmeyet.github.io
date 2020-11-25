@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 
 import i18n from "~/pages/i18n";
 
-import Header from "./Header";
-import Spotlight from "./Spotlight";
-import Footer from "./Footer";
+const Footer = React.lazy(() => import("./Footer"));
+const Header = React.lazy(() => import("./Header"));
+const Spotlight = React.lazy(() => import("./Spotlight"));
 
 import styles from "./index.pcss";
 
@@ -13,11 +13,11 @@ i18n.initialize();
 
 const Home = () => <div className={styles.container}>
   <header className={styles.header}>
-    <Header />
+    <Suspense fallback={<></>}><Header /></Suspense>
   </header>
   <div className={styles.content}>
-    <section><Spotlight /></section>
-    <footer><Footer /></footer>
+    <section><Suspense fallback={<></>}><Spotlight /></Suspense></section>
+    <footer><Suspense fallback={<></>}><Footer /></Suspense></footer>
   </div>
 </div>;
 

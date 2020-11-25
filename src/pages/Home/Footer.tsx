@@ -7,8 +7,8 @@ import {
 } from "react-icons/fa";
 
 import { useTranslation } from "~/pages/i18n";
+import { Name } from "~/pages/parts";
 import styles from "./Footer.pcss";
-import Name from "./Name";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -20,10 +20,10 @@ const Footer = () => {
     </div>
     <div className={styles.column2}>
       <div className={styles.externalLinks}>
-        <a href="https://github.com/vmeyet"><FaGithub /></a>
-        <a href="https://stackoverflow.com/users/1172095/astreal"><FaStackOverflow /></a>
-        <a href="https://www.linkedin.com/in/vivienmeyet"><FaLinkedinIn /></a>
-        <a href="https://www.instagram.com/vee_memento"><FaInstagram /></a>
+        <a aria-label={t("home.footer.links.github")} href="https://github.com/vmeyet"><FaGithub /></a>
+        <a aria-label={t("home.footer.links.stackoverflow")} href="https://stackoverflow.com/users/1172095/astreal"><FaStackOverflow /></a>
+        <a aria-label={t("home.footer.links.linkedin")} href="https://www.linkedin.com/in/vivienmeyet"><FaLinkedinIn /></a>
+        <a aria-label={t("home.footer.links.instagram")} href="https://www.instagram.com/vee_memento"><FaInstagram /></a>
       </div>
       <div className={styles.copyright}>© 2020 Vivien Meyet. {t("home.footer.madeInFrance")}</div>
     </div>
