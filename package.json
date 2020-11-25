@@ -9,8 +9,9 @@
     "clean": "rm -rf dist && rm -rf node_modules",
     "serve": "yarn && parcel src/index.html",
     "build": "parcel build src/index.html --experimental-scope-hoisting",
-    "github-pages": "cp ./dist/index.html index.html && sed -E 's$=\"/$=\"/dist/$g' ./dist/index.html > ./index.html",
-    "production": "yarn run clean && yarn && yarn run build && cp -R dist docs"
+    "production": "yarn run clean && yarn && yarn run build",
+    "removeAll": "find . -maxdepth 1 ! -type d ! -name .gitignore -exec rm '{}' \\;",
+    "github-pages": "git checkout gh-pages && yarn run removeAll && mv dist/* ."
   },
   "keywords": [],
   "author": "",
