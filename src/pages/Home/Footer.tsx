@@ -1,6 +1,7 @@
 import React from "react";
 import {
   FaGithub,
+  FaHackerrank,
   FaInstagram,
   FaLinkedinIn,
   FaStackOverflow,
@@ -21,6 +22,7 @@ const Footer = () => {
     <div className={styles.column2}>
       <div className={styles.externalLinks}>
         <a aria-label={t("home.footer.links.github")} href="https://github.com/vmeyet"><FaGithub /></a>
+        <a aria-label={t("home.footer.links.hackerrank")} href="https://www.hackerrank.com/profile/vivien_meyet"><FaHackerrank /></a>
         <a aria-label={t("home.footer.links.stackoverflow")} href="https://stackoverflow.com/users/1172095/astreal"><FaStackOverflow /></a>
         <a aria-label={t("home.footer.links.linkedin")} href="https://www.linkedin.com/in/vivienmeyet"><FaLinkedinIn /></a>
         <a aria-label={t("home.footer.links.instagram")} href="https://www.instagram.com/vee_memento"><FaInstagram /></a>

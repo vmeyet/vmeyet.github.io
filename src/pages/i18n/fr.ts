@@ -37,6 +37,7 @@ export default {
       moto: "Créons des choses belles et efficaces",
       links: {
         github: "Vivien sur Github",
+        hackerrank: "Vivien sur HackerRank",
         stackoverflow: "Vivien sur StackOverflow",
         linkedin: "Vivien sur LinkedIn",
         instagram: "Vivien sur Instagram",
